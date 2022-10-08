@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class Server2Component implements OnInit {
 
   constructor() { }
+  //Implementing interpolation data binding
+  serverID: number = 10
+  serverStatus: string = "Offline"
+
+  getserverStatus(){
+    return this.serverStatus = "Online"
+  }
 
   ngOnInit(): void {
   }
