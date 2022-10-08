@@ -6,8 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server2.component.scss']
 })
 export class Server2Component implements OnInit {
+  allowNewServer = false;
 
-  constructor() { }
+  constructor() {
+    setTimeout( () => {
+      this.allowNewServer = true;
+    },2000);
+  }
   //Implementing interpolation data binding
   serverID: number = 10
   serverStatus: string = "Offline"
