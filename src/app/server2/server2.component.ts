@@ -6,10 +6,31 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./server2.component.scss']
 })
 export class Server2Component implements OnInit {
+  allowNewServer = false;
+  // Implementing event data binding
+  serverCreationStatus: string = "Server is not created"
+  // Implementing two way binding
+  enterServer = "Default name"
 
-  constructor() { }
+  constructor() {
+    setTimeout( () => {
+      this.allowNewServer = true;
+    },2000);
+  }
+  //Implementing interpolation data binding
+  serverID: number = 10
+  serverStatus: string = "Offline"
+
+  getserverStatus(){
+    return this.serverStatus = "Online"
+  }
 
   ngOnInit(): void {
+  }
+
+  //Implementing event Databinding, after created word its combined data binding.
+  onServerCreating() {
+    this.serverCreationStatus = "Server is created ! Name is" + this.enterServer
   }
 
 }
