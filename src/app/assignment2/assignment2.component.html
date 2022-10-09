@@ -1,0 +1,24 @@
+<div class="asswhole">
+  <h2 class="ass">Assignment2 works!</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <textarea rows="5" cols="100">
+          Task details:
+          Add a input field which updates a property["username"] via two way binding
+          Output the username property via string interpolation(in a paragraph below the input)
+          Add a button which may only be clicked if the username is NOT an empty string.
+          Upon clicking the button the username should be reset to an empty string.
+        </textarea> <br>
+        <label>Enter username</label>
+        <input type="string" class="form-control" [(ngModel)]="userName">
+        <p>{{userName}}</p>
+        <!--In the next line you can see that we are using property databinding,
+        if you dont make disable as attribute it wont work-->
+        <!--And we dont do it then we can just provide true and false-->
+        <button class="btn btn-primary" [disabled] ="userName === ''" (click)="onResetField()" >Reset Field</button>
+        <br>
+      </div>
+    </div>
+  </div>
+</div>

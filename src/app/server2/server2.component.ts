@@ -28,9 +28,9 @@ export class Server2Component implements OnInit {
   ngOnInit(): void {
   }
 
-  //Implementing event Databinding
+  //Implementing event Databinding, after created word its combined data binding.
   onServerCreating() {
-    this.serverCreationStatus = "Server is created"
+    this.serverCreationStatus = "Server is created ! Name is" + this.enterServer
   }
 
 }
