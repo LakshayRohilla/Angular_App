@@ -11,3 +11,8 @@
   <h2>Implementing property databinding</h2>
   <button [disabled] = "!allowNewServer" class ="btn btn-primary">Property Data Binding</button>
 </div>
+<div class="bgcolor">
+  <h2>Implementing event databinding</h2>
+  <button [disabled] = "!allowNewServer" (click)="onServerCreating()" class ="btn btn-primary">Click to perform Event Data Binding</button>
+  <p>{{serverCreationStatus}}</p>
+</div>
