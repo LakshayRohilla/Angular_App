@@ -9,6 +9,8 @@ export class Server2Component implements OnInit {
   allowNewServer = false;
   // Implementing event data binding
   serverCreationStatus: string = "Server is not created"
+  // Implementing two way binding
+  enterServer = "Default name"
 
   constructor() {
     setTimeout( () => {

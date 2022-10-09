@@ -16,3 +16,8 @@
   <button [disabled] = "!allowNewServer" (click)="onServerCreating()" class ="btn btn-primary">Click to perform Event Data Binding</button>
   <p>{{serverCreationStatus}}</p>
 </div>
+<div class="bg2">
+  <h2>Implementing two way databinding</h2>
+  <input [(ngModel)]="enterServer">
+  <p>{{enterServer}}</p>
+</div>
