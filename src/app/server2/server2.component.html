@@ -4,7 +4,7 @@
   <p>Normally by adding the variables:</p>
   <h6>Server number {{serverID}} and the status is {{serverStatus}}</h6>
   <p>By adding function as we could pass function as well</p>
-  <h6>Next server status {{getserverStatus()}}</h6>
+  <!--<h6>Next server status {{getserverStatus()}}</h6>-->
 </div>
 <hr>
 <div class="pro">
@@ -25,4 +25,16 @@
 <div style="background-color: antiquewhite">
   <h2>Implementing all databinding together</h2>
   <input [(ngModel)]="enterServer">
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Implementing ngStyle directive</h2>
+      <p [ngStyle]="{'background-color': getColor()}"
+        [ngClass]="{online: serverStatus === 'Online'}">
+        Server number {{serverID}} and the status is {{serverStatus}}</p>
+      <p [ngStyle]="{backgroundColor: getColor()}">Server number {{serverID}} and the status is {{serverStatus}}</p>
+    </div>
+  </div>
 </div>
