@@ -41,4 +41,6 @@ export class Server2Component implements OnInit {
   getColor() {
     return this.serverStatus === 'Online' ? 'Green' : "Red";
   }
+
+
 }
