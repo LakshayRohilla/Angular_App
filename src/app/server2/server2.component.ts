@@ -16,14 +16,19 @@ export class Server2Component implements OnInit {
     setTimeout( () => {
       this.allowNewServer = true;
     },2000);
+    //ngStyle implementation
+    this.serverStatus = Math.random() > 0.5 ? 'Offline' : 'Online';
   }
   //Implementing interpolation data binding
   serverID: number = 10
   serverStatus: string = "Offline"
 
+  /* Commeting this function bcz its getting called everytime and changes the value to online we want both to
+     work with ngStyle directive.
   getserverStatus(){
     return this.serverStatus = "Online"
   }
+   */
 
   ngOnInit(): void {
   }
@@ -32,5 +37,10 @@ export class Server2Component implements OnInit {
   onServerCreating() {
     this.serverCreationStatus = "Server is created ! Name is" + this.enterServer
   }
+
+  getColor() {
+    return this.serverStatus === 'Online' ? 'Green' : "Red";
+  }
+
 
 }
