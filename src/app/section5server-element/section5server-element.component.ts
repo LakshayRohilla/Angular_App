@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-section5server-element',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./section5server-element.component.scss']
 })
 export class Section5serverElementComponent implements OnInit {
+
+  @Input() element: {type: string, name: string, content: string};
 
   constructor() { }
 
