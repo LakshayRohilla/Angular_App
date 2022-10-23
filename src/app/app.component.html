@@ -5,14 +5,19 @@
 <br>
 <hr>
 <hr>
+<marquee style="background-color: coral">Section-5 Starts Here</marquee>
 <div class="container">
-  <app-section5cockpit></app-section5cockpit>
+  <app-section5cockpit
+    (serverCreated)="onServerAdded($event)"
+    (blueprintCreated)="onBlueprintAdded($event)"
+  ></app-section5cockpit>
   <hr>
   <div class="row">
     <div class="col-xs-12">
       <app-section5server-element *ngFor="let serverElement of serverElements"
-      [element]="serverElement"
+      [srvElement]="serverElement"
       ></app-section5server-element>
     </div>
   </div>
 </div>
+<marquee style="background-color: coral">Section-5 Ends Here</marquee>
