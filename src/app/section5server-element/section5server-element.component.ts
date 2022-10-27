@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class Section5serverElementComponent implements OnInit {
 
-  @Input("srvElement") element: {type: string, name: string, content: string} = {type: "", name: "", content: "" };
+  @Input("srvElement") element: {type: string, name: string, content: string} = {type:  "", name: "", content: "" };
   constructor() { }
 
   ngOnInit(): void {
