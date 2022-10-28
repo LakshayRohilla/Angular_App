@@ -12,6 +12,11 @@ import { Section5serverElementComponent } from './section5server-element/section
 import { CounterComponent } from './ngrx/without-ngrx/counter/counter.component';
 import { CounterOutputComponent } from './ngrx/without-ngrx/counter-output/counter-output.component';
 import { CounterButtonsComponent } from './ngrx/without-ngrx/counter-buttons/counter-buttons.component';
+import {NgrxCounterButtonsComponent} from "./ngrx/with-ngrx/ngrx-counter-buttons/ngrx-counter-buttons.component";
+import {NgrxCounterOutputComponent} from "./ngrx/with-ngrx/ngrx-counter-output/ngrx-counter-output.component";
+import {NgrxCounterComponent} from "./ngrx/with-ngrx/ngrx-counter/ngrx-counter.component";
+import {StoreModule} from "@ngrx/store";
+import {counterReducer} from "./ngrx/with-ngrx/state/counter.reducer";
 
 @NgModule({
   declarations: [
@@ -23,12 +28,16 @@ import { CounterButtonsComponent } from './ngrx/without-ngrx/counter-buttons/cou
     Section5serverElementComponent,
     CounterComponent,
     CounterOutputComponent,
-    CounterButtonsComponent
+    CounterButtonsComponent,
+    NgrxCounterButtonsComponent,
+    NgrxCounterOutputComponent,
+    NgrxCounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    StoreModule.forRoot({counter: counterReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
