@@ -14,8 +14,10 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change the first element</button>
       <app-section5server-element *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
+                                  [name]="serverElement.name"
       ></app-section5server-element>
     </div>
   </div>
