@@ -16,15 +16,15 @@ export class NgrxCounterButtonsComponent implements OnInit {
   }
 
   onIncrement() {
-    this.store.dispatch(increment())
+    this.store.dispatch(increment());
   }
 
   onDecrement() {
-    this.store.dispatch(decrement())
+    this.store.dispatch(decrement());
   }
 
   onReset() {
-    this.store.dispatch(reset())
+    this.store.dispatch(reset());
   }
 
 }
