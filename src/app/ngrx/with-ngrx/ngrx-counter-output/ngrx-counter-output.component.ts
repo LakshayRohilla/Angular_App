@@ -9,9 +9,10 @@ import {Store} from "@ngrx/store";
 export class NgrxCounterOutputComponent implements OnInit {
   counter: number = 0;
   constructor(private store: Store<{counter: {counter: number}}>) { }
-
+  //here we are injecting the store to get the counter value.
   ngOnInit(): void {
     this.store.select('counter').subscribe((data) => {
+      // select will gives the observables.
       this.counter = data.counter;
       });
   }

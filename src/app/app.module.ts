@@ -38,6 +38,7 @@ import {counterReducer} from "./ngrx/with-ngrx/state/counter.reducer";
     AppRoutingModule,
     FormsModule,
     StoreModule.forRoot({counter: counterReducer})
+    // here other than "counter" you can give any name and you would be using it inside the component.
   ],
   providers: [],
   bootstrap: [AppComponent]
