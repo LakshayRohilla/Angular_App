@@ -9,6 +9,7 @@ import {FormsModule} from "@angular/forms";
 import { Assignment2Component } from './assignment2/assignment2.component';
 import { SECTION5cockpitComponent } from './section5cockpit/section5cockpit.component';
 import { Section5serverElementComponent } from './section5server-element/section5server-element.component';
+import {Assignment4Module} from "./assignment-4/assignment-4.module";
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { Section5serverElementComponent } from './section5server-element/section
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    Assignment4Module
   ],
   providers: [],
   bootstrap: [AppComponent]
