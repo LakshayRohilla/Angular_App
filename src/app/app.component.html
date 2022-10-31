@@ -24,5 +24,20 @@
   </div>
 </div>
 <marquee style="background-color: coral">Section-5 Ends Here</marquee>
-<app-gamecontrol></app-gamecontrol>
+
+<br>
+<hr>
+<marquee style="background-color: burlywood">Assignment 4 Starts Here</marquee>
+  <div class="row">
+      <div class="col-xs-12">
+        <app-gamecontrol (intervalFired)="onIntervalFired($event)"></app-gamecontrol>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+        <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+        <app-even *ngFor="let evenNumber of evenNumbers" [number2]="evenNumber"></app-even>
+      </div>
+  </div>
+<marquee style="background-color: burlywood">Assignment 4 Ends Here</marquee>
 

@@ -13,7 +13,9 @@ import { EvenComponent } from './even/even.component';
     EvenComponent
   ],
   exports: [
-    GamecontrolComponent
+    GamecontrolComponent,
+    OddComponent,
+    EvenComponent
   ],
   imports: [
     CommonModule
