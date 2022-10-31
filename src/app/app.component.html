@@ -15,6 +15,7 @@
   <div class="row">
     <div class="col-xs-12">
       <button class="btn btn-primary" (click)="onChangeFirst()">Change the first element</button>
+      <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first server</button>
       <app-section5server-element *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
                                   [name]="serverElement.name"
