@@ -9,7 +9,7 @@ import {decrement, increment, reset} from "../state/counter.actions";
 })
 export class NgrxCounterButtonsComponent implements OnInit {
 
-  constructor(private store: Store<{ counter: { counter: number }}>) { }
+  constructor(private store: Store<{ counterStore: { counter: number }}>) { }
   // Here the first counter is from app.module.ts file.
   // here we are injecting the store to get the object.
   ngOnInit(): void {
