@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Store} from "@ngrx/store";
-import {decrement, increment, reset} from "../state/counter.actions";
+import {calculation, decrement, increment, reset, resetCalculation} from "../state/counter.actions";
 
 @Component({
   selector: 'app-ngrx-counter-buttons',
@@ -9,7 +9,7 @@ import {decrement, increment, reset} from "../state/counter.actions";
 })
 export class NgrxCounterButtonsComponent implements OnInit {
 
-  constructor(private store: Store<{ counterStore: { counter: number }}>) { }
+  constructor(private store: Store<{ counterStore: { counter: number, counterCal: number }}>) { }
   // Here the first counter is from app.module.ts file.
   // here we are injecting the store to get the object.
   ngOnInit(): void {
@@ -25,6 +25,14 @@ export class NgrxCounterButtonsComponent implements OnInit {
 
   onReset() {
     this.store.dispatch(reset())
+  }
+
+  onCalculation() {
+    this.store.dispatch(calculation())
+  }
+
+  onResetCalculation() {
+    this.store.dispatch(resetCalculation())
   }
 
 }
