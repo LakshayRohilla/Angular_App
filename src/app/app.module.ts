@@ -17,6 +17,7 @@ import {NgrxCounterOutputComponent} from "./ngrx/with-ngrx/ngrx-counter-output/n
 import {NgrxCounterComponent} from "./ngrx/with-ngrx/ngrx-counter/ngrx-counter.component";
 import {StoreModule} from "@ngrx/store";
 import {counterReducer} from "./ngrx/with-ngrx/state/counter.reducer";
+import {Section7Module} from "./section-7/section-7.module";
 
 @NgModule({
   declarations: [
@@ -37,8 +38,9 @@ import {counterReducer} from "./ngrx/with-ngrx/state/counter.reducer";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    StoreModule.forRoot({counterStore: counterReducer})
+    StoreModule.forRoot({counterStore: counterReducer}),
     // here other than "counter" you can give any name and you would be using it inside the component.
+    Section7Module
   ],
   providers: [],
   bootstrap: [AppComponent]
