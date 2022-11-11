@@ -18,6 +18,7 @@ import {NgrxCounterComponent} from "./ngrx/with-ngrx/ngrx-counter/ngrx-counter.c
 import {StoreModule} from "@ngrx/store";
 import {counterReducer} from "./ngrx/with-ngrx/state/counter.reducer";
 import {Section7Module} from "./section-7/section-7.module";
+import {Assignment4Module} from "./assignment-4/assignment-4.module";
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import {Section7Module} from "./section-7/section-7.module";
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    Assignment4Module,
     StoreModule.forRoot({counterStore: counterReducer}),
     // here other than "counter" you can give any name and you would be using it inside the component.
     Section7Module

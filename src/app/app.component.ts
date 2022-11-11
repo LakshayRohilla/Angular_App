@@ -24,4 +24,22 @@ export class AppComponent {
       content: blueprintData.serverContent
     });
   }
+  onChangeFirst() {
+    this.serverElements[0].name = "Changed!";
+  }
+  onDestroyFirst() {
+    this.serverElements.splice(0, 1);
+  }
+
+  oddNumbers: number[] = [];
+  evenNumbers: number[] = [];
+
+  onIntervalFired(firedNumber: number) {
+    if(firedNumber % 2 == 0) {
+      this.evenNumbers.push(firedNumber);
+    }
+    else {
+      this.oddNumbers.push(firedNumber);
+    }
+  }
 }

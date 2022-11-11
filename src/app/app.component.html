@@ -47,3 +47,21 @@
 <marquee style="background-color: greenyellow;"> 7 - Directive Starts here</marquee>
 <app-section7></app-section7>
 <marquee style="background-color: greenyellow;"> 7 - Directive Ends here</marquee>
+<marquee style="background-color: grey">Application without NgRx Ends here</marquee>
+
+<br>
+<hr>
+<marquee style="background-color: burlywood">Assignment 4 Starts Here</marquee>
+  <div class="row">
+      <div class="col-xs-12">
+        <app-gamecontrol (intervalFired)="onIntervalFired($event)"></app-gamecontrol>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-xs-12">
+        <app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>
+        <app-even *ngFor="let evenNumber of evenNumbers" [number2]="evenNumber"></app-even>
+      </div>
+  </div>
+<marquee style="background-color: burlywood">Assignment 4 Ends Here</marquee>
+
