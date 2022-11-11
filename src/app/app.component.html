@@ -14,11 +14,8 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <button class="btn btn-primary" (click)="onChangeFirst()">Change the first element</button>
-      <button class="btn btn-danger" (click)="onDestroyFirst()">Destroy first server</button>
       <app-section5server-element *ngFor="let serverElement of serverElements"
       [srvElement]="serverElement"
-                                  [name]="serverElement.name"
       ></app-section5server-element>
     </div>
   </div>
@@ -26,7 +23,7 @@
 <marquee style="background-color: coral">Section-5 Ends Here</marquee>
 <br>
 <hr>
-<marquee style="background-color: grey">Application without NgRx Starts here</marquee>
+<marquee style="background-color: darkgoldenrod">Application without NgRx Starts here</marquee>
 <div class="container">
   <div class="row">
     <div class="col-md-12 text-center">
@@ -34,6 +31,16 @@
     </div>
   </div>
 </div>
+<marquee style="background-color: darkgoldenrod">Application without NgRx Ends here</marquee>
+<marquee style="background-color: purple; color: white">Application with NgRx Starts here</marquee>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <app-ngrx-counter></app-ngrx-counter>
+    </div>
+  </div>
+</div>
+<marquee style="background-color: purple; color: white">Application with NgRx Ends here</marquee>
 <marquee style="background-color: grey">Application without NgRx Ends here</marquee>
 
 <br>
