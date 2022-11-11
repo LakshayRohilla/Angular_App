@@ -31,7 +31,14 @@
       </ul>
       <p appBasicHighlight>Implementing Styling with basic self created directive</p>
       <p defaultColor="yellow" [appBetterHighlight]="'red'">Implementing Styling with basic self created directive using Renderer2</p>
+      <div [ngSwitch]="value">
+        <h2>*ngSwitch</h2>
+        <p *ngSwitchCase="5">Value is 5</p>
+        <p *ngSwitchCase="10">Value is 10</p>
+        <p *ngSwitchCase="100">Value is 100</p>
+        <p *ngSwitchDefault>Value is Default</p>
 
+      </div>
     </div>
   </div>
 </div>

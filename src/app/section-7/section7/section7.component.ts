@@ -10,6 +10,7 @@ export class Section7Component implements OnInit {
   oddNumbers = [1, 3, 5]
   evenNumbers = [2, 4]
   onlyOdd = false;
+  value: number = 5;
 
   constructor() { }
 
